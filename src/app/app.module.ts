@@ -9,6 +9,8 @@ import {MusicsService} from './services/musics.service';
 import { HttpClientModule } from '@angular/common/http';
 import { SafePipe } from './pipes/safe.pipe';
 import { AdminComponent } from './components/admin/admin.component';
+import { FormsModule } from '@angular/forms';
+
 
 const appRoutes: Routes = [
   {
@@ -34,7 +36,8 @@ const appRoutes: Routes = [
   imports: [
     BrowserModule,
     RouterModule.forRoot(appRoutes),
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [MusicsService],
   bootstrap: [AppComponent]

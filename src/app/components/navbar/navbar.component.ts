@@ -8,8 +8,6 @@ import {Component, Input, OnInit} from '@angular/core';
 })
 export class NavbarComponent implements OnInit {
 
-  @Input() term = '';
-
   constructor() { }
 
   ngOnInit() {

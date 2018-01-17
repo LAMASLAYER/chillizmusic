@@ -6,10 +6,10 @@ import { Pipe, PipeTransform } from '@angular/core';
 export class FilterPipe implements PipeTransform {
 
   transform(musics: any, term: any): boolean {
-    if (term === undefined) {return musics;}
+    if (term === undefined) { return musics; }
 
     return musics.filter(function (music) {
-      return music.name.includes(term);
+      return music.name.toLowerCase().includes(term.toLowerCase());
     });
 
   }

@@ -11,6 +11,7 @@ import {Musics} from '../../models/musics';
 export class HomeComponent implements OnInit {
   private musicsService: MusicsService;
   public musics: Array<Musics>;
+  public term: string;
 
   // @ViewChild('openModal') openModal: ElementRef;
   // public liked: boolean;
