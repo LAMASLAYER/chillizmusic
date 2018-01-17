@@ -11,7 +11,9 @@ import {Musics} from '../../models/musics';
 export class HomeComponent implements OnInit {
   private musicsService: MusicsService;
   public musics: Array<Musics>;
+  public allMusics: Array<Musics>;
   public term: string;
+  public displayAll: boolean;
 
   // @ViewChild('openModal') openModal: ElementRef;
   // public liked: boolean;
@@ -21,17 +23,27 @@ export class HomeComponent implements OnInit {
   }
 
   ngOnInit() {
+    this.musics = [];
+    this.allMusics = [];
     this.loadMusics();
     // if (localStorage.getItem('liked') !== 'true') {
     //   this.openModal.nativeElement.click();
     // }
   }
 
-  private loadMusics() {
+  private loadMusics(): void {
     this.musicsService.getMusics().subscribe(
       data => {
-        this.musics = data;
+        this.musics.push(data[0]);
+        this.musics.push(data[1]);
+        for (let i = 2; i < data.length; i ++) {
+          this.allMusics.push(data[i]);
+        }
       }
     );
+  }
+
+  public showAll(): void {
+    this.displayAll = true;
   }
 }
