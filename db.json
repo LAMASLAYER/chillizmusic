@@ -1,24 +1,54 @@
 {
-    "musics": [
-        {
-          "id":1,
-          "image":"../../assets/summer.jpg",
-          "name":"Fresh and summery",
-          "author":"chilliz",
-          "released":"16/01/2018",
-          "title": "This is how you feel fresh",
-          "article":"Throw your outfit away and feel the fresh !",
-          "src":"https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/383937692&amp;color=%23ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;show_teaser=true&amp;visual=true"
-          },
-        {
-          "id":2,
-          "image":"../../assets/FDR0906B.jpg",
-          "name":"Mister president",
-          "author":"chilliz",
-          "released":"16/01/2018",
-          "title":"Ever heard about patriotism ?",
-          "article":"Mister president is a fine guy. Lay back and relax !",
-          "src": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/383936336&amp;color=%23ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;show_teaser=true&amp;visual=true"
-        }
-    ]
+  "musics": [
+    {
+      "id": 1,
+      "image": "../../assets/summer.jpg",
+      "name": "Fresh and summery",
+      "author": "chilliz",
+      "released": "16/01/2018",
+      "title": "This is how you feel fresh",
+      "article": "Throw your outfit away and feel the fresh !",
+      "src": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/383937692&amp;color=%23ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;show_teaser=true&amp;visual=true"
+    },
+    {
+      "id": 2,
+      "image": "../../assets/FDR0906B.jpg",
+      "name": "Mister president",
+      "author": "chilliz",
+      "released": "16/01/2018",
+      "title": "Ever heard about patriotism ?",
+      "article": "Mister president is a fine guy. Lay back and relax !",
+      "src": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/383936336&amp;color=%23ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;show_teaser=true&amp;visual=true"
+    },
+    {
+      "name": "test",
+      "title": "Test",
+      "author": "test",
+      "image": "../../assets/chili.png",
+      "article": "This is a test",
+      "released": "17/01/2018",
+      "src": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/383937692&amp;color=%23ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;show_teaser=true&amp;visual=true",
+      "id": 3
+    },
+    {
+      "name": "This is another test",
+      "title": "This is another test",
+      "author": "This was me dio",
+      "image": "../../assets/chili.png",
+      "article": "This is a really good test",
+      "released": "17/01/2018",
+      "src": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/383937692&amp;color=%23ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;show_teaser=true&amp;visual=true",
+      "id": 4
+    },
+    {
+      "name": "well this is the 3rd test",
+      "title": "I think it's the last",
+      "author": "Potato ching chong tomato",
+      "image": "../../assets/chili.png",
+      "article": "Im done",
+      "src": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/383937692&amp;color=%23ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;show_teaser=true&amp;visual=true",
+      "released": "01/01/2022",
+      "id": 5
+    }
+  ]
 }

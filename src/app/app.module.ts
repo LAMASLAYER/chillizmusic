@@ -10,6 +10,9 @@ import { HttpClientModule } from '@angular/common/http';
 import { SafePipe } from './pipes/safe.pipe';
 import { AdminComponent } from './components/admin/admin.component';
 import { FormsModule } from '@angular/forms';
+import { PanelComponent } from './components/panel/panel.component';
+import {GlobalService} from './services/global.service';
+import {AdminService} from './services/admin.service';
 
 
 const appRoutes: Routes = [
@@ -21,6 +24,14 @@ const appRoutes: Routes = [
   {
     path: 'home',
     component: HomeComponent
+  },
+  {
+    path: 'admin',
+    component: AdminComponent
+  },
+  {
+    path: 'panel',
+    component: PanelComponent
   }
 ];
 
@@ -31,7 +42,8 @@ const appRoutes: Routes = [
     NavbarComponent,
     FilterPipe,
     SafePipe,
-    AdminComponent
+    AdminComponent,
+    PanelComponent
   ],
   imports: [
     BrowserModule,
@@ -39,7 +51,11 @@ const appRoutes: Routes = [
     HttpClientModule,
     FormsModule
   ],
-  providers: [MusicsService],
+  providers: [
+    MusicsService,
+    GlobalService,
+    AdminService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
