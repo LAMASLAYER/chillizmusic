@@ -4,6 +4,11 @@ import { RouterModule, Routes } from '@angular/router';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './components/home/home.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
+import { FilterPipe } from './pipes/filter.pipe';
+import {MusicsService} from './services/musics.service';
+import { HttpClientModule } from '@angular/common/http';
+import { SafePipe } from './pipes/safe.pipe';
+import { AdminComponent } from './components/admin/admin.component';
 
 const appRoutes: Routes = [
   {
@@ -21,13 +26,17 @@ const appRoutes: Routes = [
   declarations: [
     AppComponent,
     HomeComponent,
-    NavbarComponent
+    NavbarComponent,
+    FilterPipe,
+    SafePipe,
+    AdminComponent
   ],
   imports: [
     BrowserModule,
     RouterModule.forRoot(appRoutes),
+    HttpClientModule
   ],
-  providers: [],
+  providers: [MusicsService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
