@@ -1,0 +1,79 @@
+<div style="margin-top: 5%" class="container">
+  <div class="row">
+    <app-progression style="border:1px grey solid"></app-progression>
+  </div>
+  <div class="row">
+    Search for a music: <input type="text" [(ngModel)]="term" />
+    <div style="margin-bottom: 5%" *ngFor="let m of musics | filter:term" class="row">
+      <div class="col-xs-12 col-sm-3 col-md-3">
+        <a href="#">
+          <img [src]="m.image" class="img-responsive img-box img-thumbnail">
+        </a>
+      </div>
+      <div class="col-xs-12 col-sm-9 col-md-9">
+        <div class="list-group">
+          <div class="list-group-item">
+            <div class="row-picture">
+              <a href="https://soundcloud.com/chillizmusic/">
+                <img class="circle img-thumbnail img-box" src="../../assets/chili.png" alt="sintret">
+              </a>
+            </div>
+            <div class="row-content">
+              <div class="list-group-item-heading">
+                <a href="https://soundcloud.com/chillizmusic/" title="Chilliz">
+                  <small>{{ m.author }}</small>
+                </a>
+              </div>
+              <small>
+                <i class="glyphicon glyphicon-time"></i> Released: {{ m.released }}<span class="twitter"> <i class="fa fa-twitter"></i> <a target="_blank" href="http://www.soundclound.com/chillizmusic" alt="soundcloud" title="Check us on soundcloud">Soundcloud</a></span>
+                <br>
+                <span class="explore"><i class="glyphicon glyphicon-th"></i> <a href="https://soundcloud.com/chillizmusic/fresh-and-summery">{{ m.name }}</a></span>
+              </small>
+            </div>
+          </div>
+        </div>
+        <h4><a href="#">{{ m.title }}</a></h4>
+        <p>{{ m.article }}</p>
+        <iframe width="100%" height="100" scrolling="no" frameborder="no" [src]="m.src | safe"></iframe>
+      </div>
+    </div>
+
+  <div *ngIf="displayAll">
+    <div style="margin-bottom: 5%; border: 1px grey solid;border-radius: 5px 5px 5px 5px;" *ngFor="let a of allMusics | filter:term" class="row">
+      <div class="col-xs-12 col-sm-3 col-md-3">
+        <a href="#">
+          <img style="width: 900px;" [src]="a.image" class="img-responsive img-box img-thumbnail">
+        </a>
+      </div>
+      <div class="col-xs-12 col-sm-9 col-md-9">
+        <div class="list-group">
+          <div class="list-group-item">
+            <div class="row-picture">
+              <a href="https://soundcloud.com/chillizmusic/">
+                <img class="circle img-thumbnail img-box" src="../../assets/chili.png" alt="sintret">
+              </a>
+            </div>
+            <div class="row-content">
+              <div class="list-group-item-heading">
+                <a href="https://soundcloud.com/chillizmusic/" title="Chilliz">
+                  <small>{{ a.author }}</small>
+                </a>
+              </div>
+              <small>
+                <i class="glyphicon glyphicon-time"></i> Released: {{ a.released }}<span class="twitter"> <i class="fa fa-twitter"></i> <a target="_blank" href="http://www.soundclound.com/chillizmusic" alt="soundcloud" title="Check us on soundcloud">Soundcloud</a></span>
+                <br>
+                <span class="explore"><i class="glyphicon glyphicon-th"></i> <a href="https://soundcloud.com/chillizmusic/fresh-and-summery">{{ a.name }}</a></span>
+              </small>
+            </div>
+          </div>
+        </div>
+        <h4><a href="#">{{ a.title }}</a></h4>
+        <p>{{ a.article }}</p>
+        <iframe width="100%" height="100" scrolling="no" frameborder="no" [src]="a.src | safe"></iframe>
+      </div>
+    </div>
+  </div>
+
+  </div>
+  <a (click)="showAll()">See all musics</a>
+</div>

@@ -1,0 +1,20 @@
+<p>Next release:</p>
+
+<div>
+  <label>Composing</label>
+  <div class="progress">
+    <div class="progress-bar" [style.width]="composing + '%'" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+  </div>
+  <label>Recording</label>
+  <div class="progress">
+    <div class="progress-bar" [style.width]="recording + '%'" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+  </div>
+  <label>Mixing</label>
+  <div class="progress">
+    <div class="progress-bar" [style.width]="mixing + '%'" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+  </div>
+  <label>Post production</label>
+  <div class="progress">
+    <div class="progress-bar" [style.width]="postProd + '%'" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+  </div>
+</div>

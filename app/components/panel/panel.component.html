@@ -1,0 +1,79 @@
+<form *ngIf="!ok" #form class="container">
+  <div class="form-group" [class.has-error]="newMusic.name">
+    <input #title="ngModel"
+           required
+           name="name"
+           placeholder="Name of the music"
+           class="form-control"
+           type="text"
+           (input)="newMusic.name  = $event.target.value"
+           [(ngModel)]="newMusic.name">
+  </div>
+  <div class="form-group" [class.has-error]="newMusic.title">
+    <input #title="ngModel"
+           required
+           name="title"
+           placeholder="Title of the article"
+           class="form-control"
+           type="text"
+           (input)="newMusic.title  = $event.target.value"
+           [(ngModel)]="newMusic.title">
+  </div>
+  <div class="form-group" [class.has-error]="newMusic.author">
+    <input #title="ngModel"
+           required
+           name="author"
+           placeholder="Author"
+           class="form-control"
+           type="text"
+           (input)="newMusic.author  = $event.target.value"
+           [(ngModel)]="newMusic.author">
+  </div>
+  <div class="form-group" [class.has-error]="newMusic.image">
+    <input #title="ngModel"
+           required
+           name="image"
+           placeholder="Image src (../../assets/FILENAME)"
+           class="form-control"
+           type="text"
+           (input)="newMusic.image  = $event.target.value"
+           [(ngModel)]="newMusic.image">
+  </div>
+  <div class="form-group" [class.has-error]="newMusic.article">
+    <input #title="ngModel"
+           required
+           name="article"
+           placeholder="Article"
+           class="form-control"
+           type="text"
+           (input)="newMusic.article  = $event.target.value"
+           [(ngModel)]="newMusic.article">
+  </div>
+  <div class="form-group" [class.has-error]="newMusic.src">
+    <input #title="ngModel"
+           required
+           name="article"
+           placeholder="Soundcloud link for integration"
+           class="form-control"
+           type="text"
+           (input)="newMusic.src  = $event.target.value"
+           [(ngModel)]="newMusic.src">
+  </div>
+  <div class="form-group" [class.has-error]="newMusic.released">
+    <input #title="ngModel"
+           required
+           name="released"
+           placeholder="Released date (xx/xx/xxx)"
+           class="form-control"
+           type="text"
+           (input)="newMusic.released  = $event.target.value"
+           [(ngModel)]="newMusic.released">
+  </div>
+  <button [disabled]="form.invalid" (click)="addMusic()">Add music</button>
+</form>
+
+<div *ngIf="ok">
+  <p>Your music has been added properly.</p>
+  <button (click)="toBoard()">See board</button>
+  <button (click)="ok=!ok; reloadMusic()">Add another</button>
+</div>
