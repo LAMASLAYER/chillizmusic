@@ -8,7 +8,7 @@ export class GlobalService {
 
   public router: Router;
   public http: HttpClient;
-  public server: string = 'http://localhost:3000';
+  public server: string = 'http://localhost:3010';
 
   constructor(http: HttpClient, router: Router) {
     this.http = http;

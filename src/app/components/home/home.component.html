@@ -1,5 +1,8 @@
 <div style="margin-top: 5%" class="container">
   <div class="row">
+    <app-progression style="border:1px grey solid"></app-progression>
+  </div>
+  <div class="row">
     Search for a music: <input type="text" [(ngModel)]="term" />
     <div style="margin-bottom: 5%" *ngFor="let m of musics | filter:term" class="row">
       <div class="col-xs-12 col-sm-3 col-md-3">

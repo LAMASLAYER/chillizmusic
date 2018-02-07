@@ -13,6 +13,9 @@ import { FormsModule } from '@angular/forms';
 import { PanelComponent } from './components/panel/panel.component';
 import {GlobalService} from './services/global.service';
 import {AdminService} from './services/admin.service';
+import { ProgressionComponent } from './components/progression/progression.component';
+import {ReleaseService} from './services/release.service';
+import { LocationStrategy, HashLocationStrategy } from '@angular/common';
 
 
 const appRoutes: Routes = [
@@ -43,7 +46,8 @@ const appRoutes: Routes = [
     FilterPipe,
     SafePipe,
     AdminComponent,
-    PanelComponent
+    PanelComponent,
+    ProgressionComponent
   ],
   imports: [
     BrowserModule,
@@ -54,7 +58,9 @@ const appRoutes: Routes = [
   providers: [
     MusicsService,
     GlobalService,
-    AdminService
+    AdminService,
+    ReleaseService,
+    {provide: LocationStrategy, useClass: HashLocationStrategy}
   ],
   bootstrap: [AppComponent]
 })
