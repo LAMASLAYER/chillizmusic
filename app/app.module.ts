@@ -15,6 +15,7 @@ import {GlobalService} from './services/global.service';
 import {AdminService} from './services/admin.service';
 import { ProgressionComponent } from './components/progression/progression.component';
 import {ReleaseService} from './services/release.service';
+import { LocationStrategy, HashLocationStrategy } from '@angular/common';
 
 
 const appRoutes: Routes = [
@@ -58,7 +59,8 @@ const appRoutes: Routes = [
     MusicsService,
     GlobalService,
     AdminService,
-    ReleaseService
+    ReleaseService,
+    {provide: LocationStrategy, useClass: HashLocationStrategy}
   ],
   bootstrap: [AppComponent]
 })
