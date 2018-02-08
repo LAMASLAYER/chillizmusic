@@ -8,7 +8,7 @@ export class GlobalService {
 
   public router: Router;
   public http: HttpClient;
-  public server: string = 'https://api.myjson.com/bins/e0hmx';
+  public server: string = 'https://chilliz.herokuapp.com/';
 
   constructor(http: HttpClient, router: Router) {
     this.http = http;
