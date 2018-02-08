@@ -10,6 +10,7 @@ export class GlobalService {
   public http: HttpClient;
   public server: string = 'https://chilliz.herokuapp.com';
 
+
   constructor(http: HttpClient, router: Router) {
     this.http = http;
     this.router = router;
