@@ -60,5 +60,13 @@
       "released": "134547",
       "id": 6
     }
+  ],
+  "release": [
+    {
+      "composing":"100",
+      "recording":"100",
+      "mixing":"20",
+      "postProd":"0"
+    }
   ]
 }
