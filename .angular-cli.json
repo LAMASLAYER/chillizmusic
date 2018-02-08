@@ -23,7 +23,7 @@
       ],
       "scripts": [{
         "install": "npm install",
-        "postinstall": "ng build --aot -prod";
+        "postinstall": "ng build --aot -prod",
         "serve": "ng serve"
       }],
       "environmentSource": "environments/environment.ts",
