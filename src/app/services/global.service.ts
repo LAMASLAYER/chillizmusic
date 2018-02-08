@@ -8,7 +8,7 @@ export class GlobalService {
 
   public router: Router;
   public http: HttpClient;
-  public server: string = 'https://chilliz.herokuapp.com';
+  public server: string = 'http://chilliz.herokuapp.com';
 
 
   constructor(http: HttpClient, router: Router) {
