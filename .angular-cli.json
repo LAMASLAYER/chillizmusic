@@ -21,11 +21,7 @@
       "styles": [
         "styles.css"
       ],
-      "scripts": [{
-        "install": "npm install",
-        "postinstall": "ng build --aot -prod",
-        "serve": "ng serve"
-      }],
+      "scripts": [],
       "environmentSource": "environments/environment.ts",
       "environments": {
         "dev": "environments/environment.ts",
