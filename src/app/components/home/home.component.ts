@@ -44,7 +44,7 @@ export class HomeComponent implements OnInit {
   }
   
   //TEST IF FASTER
-  public getAllMusic(): void {
+  public getAllMusics(): void {
     this.musicsService.getMusics().subscribe(
       data => {
         for (let i = 2; i < data.length; i ++) {
