@@ -36,12 +36,22 @@ export class HomeComponent implements OnInit {
       data => {
         this.musics.push(data[0]);
         this.musics.push(data[1]);
-        for (let i = 2; i < data.length; i ++) {
-          this.allMusics.push(data[i]);
-        }
+//        for (let i = 2; i < data.length; i ++) {
+//          this.allMusics.push(data[i]);
+//        }
       }
     );
   }
+  
+  //TEST IF FASTER
+  public getAllMusic(): void {
+    this.musicsService.getMusics().subscribe(
+      data => {
+        for (let i = 2; i < data.length; i ++) {
+          this.allMusics.push(data[i]);
+        }
+    });
+  } 
 
   public showAll(): void {
     this.displayAll = true;
