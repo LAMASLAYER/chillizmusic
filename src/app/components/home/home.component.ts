@@ -50,6 +50,7 @@ export class HomeComponent implements OnInit {
         for (let i = 2; i < data.length; i ++) {
           this.allMusics.push(data[i]);
         }
+        this.displayAll = true;
     });
   } 
 
