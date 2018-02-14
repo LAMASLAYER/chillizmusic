@@ -1,3 +1,9 @@
+.card {
+    cursor: hand;
+    background-color: #619bf9;
+    color: white;
+}
+
 .row>.row {
   background-color: white;
   border-radius: 5px 5px 5px 5px;
